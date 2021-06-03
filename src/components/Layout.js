@@ -43,11 +43,11 @@ export const Layout = ({ children, data }) => {
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
   data: PropTypes.shape({
-    site: {
-      siteMetadata: {
+    site: PropTypes.shape({
+      siteMetadata: PropTypes.shape({
         title: PropTypes.string,
-      },
-    },
+      }),
+    }),
   }),
 }
 
