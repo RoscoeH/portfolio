@@ -13884,6 +13884,11 @@ react-helmet@^6.1.0:
     react-fast-compare "^3.1.1"
     react-side-effect "^2.1.0"
 
+react-hooks-compose@^2.0.15:
+  version "2.0.15"
+  resolved "https://registry.yarnpkg.com/react-hooks-compose/-/react-hooks-compose-2.0.15.tgz#bcb35c8c3719ed3735c2b717e6bd32e8ac7947b5"
+  integrity sha512-iA4AS/9Aqr8hCv14o4u22/PpwlkGD4s7ogRGQQPupOTbFWDopKil1gZ+fdbmxtutKAruCEnRD2qDlJrH7D4QpQ==
+
 react-inspector@^5.1.0:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/react-inspector/-/react-inspector-5.1.1.tgz#58476c78fde05d5055646ed8ec02030af42953c8"
