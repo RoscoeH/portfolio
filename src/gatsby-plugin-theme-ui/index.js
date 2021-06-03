@@ -6,10 +6,10 @@ const theme = {
   sizes: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   radii: [0, 2, 4, 8, 16, 32, 64, 99999],
   colors: {
-    text: "#000",
-    background: "red",
-    primary: "#07c",
-    secondary: "#30c",
+    text: "#caffbf",
+    background: "#080613",
+    primary: "#ffc6ff",
+    secondary: "#9bf6ff",
     muted: "#f6f6f6",
   },
   fonts: {
