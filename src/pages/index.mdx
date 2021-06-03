@@ -1,7 +1,9 @@
 <SiteMetaData>
   {({ description }) => (
     <>
-      <Box sx={{ bg: "muted", p: 3 }}>{description}</Box>
+      <Box sx={{ transform: "skewY(-1deg)", bg: "muted" }}>
+        <Box sx={{ transform: "skewY(1deg)", px: 3, py: 4 }}>{description}</Box>
+      </Box>
     </>
   )}
 </SiteMetaData>
