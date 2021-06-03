@@ -10,7 +10,7 @@ const theme = {
     background: "#080613",
     primary: "#ffc6ff",
     secondary: "#9bf6ff",
-    muted: "#f6f6f6",
+    muted: "rgba(255, 255, 255, 0.1)",
   },
   fonts: {
     body: '"Work Sans", system-ui, -apple-system, sans-serif',
