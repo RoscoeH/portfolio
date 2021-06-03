@@ -1,5 +1,7 @@
-import * as React from "react"
+/** @jsxImportSource theme-ui */
+import React from "react"
 import PropTypes from "prop-types"
+import { Themed } from "theme-ui"
 import { Link } from "gatsby"
 
 const Header = ({ siteTitle }) => (
@@ -16,7 +18,7 @@ const Header = ({ siteTitle }) => (
         padding: `1.45rem 1.0875rem`,
       }}
     >
-      <h1 style={{ margin: 0 }}>
+      <Themed.h1 style={{ margin: 0 }}>
         <Link
           to="/"
           style={{
@@ -26,7 +28,7 @@ const Header = ({ siteTitle }) => (
         >
           {siteTitle}
         </Link>
-      </h1>
+      </Themed.h1>
     </div>
   </header>
 )

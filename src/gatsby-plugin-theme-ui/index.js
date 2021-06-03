@@ -1,10 +1,21 @@
+import "typeface-nova-mono"
+import "typeface-work-sans"
+
 const theme = {
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
+  sizes: [0, 4, 8, 16, 32, 64, 128, 256, 512],
+  radii: [0, 2, 4, 8, 16, 32, 64, 99999],
+  colors: {
+    text: "#000",
+    background: "red",
+    primary: "#07c",
+    secondary: "#30c",
+    muted: "#f6f6f6",
+  },
   fonts: {
-    body:
-      'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
-    heading: "inherit",
-    monospace: "Menlo, monospace",
+    body: '"Work Sans", system-ui, -apple-system, sans-serif',
+    heading: '"Nova Mono", sans-serif',
+    monospace: "Nova Mono, monospace",
   },
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],
   fontWeights: {
@@ -16,12 +27,8 @@ const theme = {
     body: 1.5,
     heading: 1.125,
   },
-  colors: {
-    text: "#000",
-    background: "red",
-    primary: "#07c",
-    secondary: "#30c",
-    muted: "#f6f6f6",
+  borders: {
+    default: "1px solid",
   },
   styles: {
     root: {
@@ -33,8 +40,8 @@ const theme = {
       color: "text",
       fontFamily: "heading",
       lineHeight: "heading",
-      fontWeight: "heading",
-      fontSize: 5,
+      fontWeight: "body",
+      fontSize: 7,
     },
     h2: {
       color: "text",

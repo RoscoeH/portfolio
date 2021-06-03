@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@babel/plugin-proposal-decorators": "^7.14.2",
     "gatsby": "^3.4.1",
     "gatsby-plugin-gatsby-cloud": "^2.4.1",
     "gatsby-plugin-image": "^1.4.0",
@@ -19,7 +20,9 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
-    "theme-ui": "^0.9.1"
+    "theme-ui": "^0.9.1",
+    "typeface-nova-mono": "^1.1.13",
+    "typeface-work-sans": "^1.1.13"
   },
   "devDependencies": {
     "prettier": "2.2.1"
