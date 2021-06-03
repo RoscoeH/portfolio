@@ -2,8 +2,8 @@ import "typeface-nova-mono"
 import "typeface-work-sans"
 
 const theme = {
-  space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
-  sizes: [0, 4, 8, 16, 32, 64, 128, 256, 512],
+  space: [0, 4, 8, 16, 32, 64, 128, 256, 512, 640, 720, 960],
+  sizes: [0, 4, 8, 16, 32, 64, 128, 256, 512, 640, 720, 960],
   radii: [0, 2, 4, 8, 16, 32, 64, 99999],
   colors: {
     text: "#caffbf",
