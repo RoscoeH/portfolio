@@ -2,8 +2,16 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import composeHooks from "react-hooks-compose"
 import { useStaticQuery, graphql } from "gatsby"
+import { MDXProvider } from "@mdx-js/react"
+import * as themeUiComponents from "theme-ui"
 
 import Header from "./Header"
+import SiteMetaData from "./SiteMetaData"
+
+const components = {
+  SiteMetaData,
+  ...themeUiComponents,
+}
 
 export const Layout = ({ children, data }) => {
   return (
@@ -16,13 +24,16 @@ export const Layout = ({ children, data }) => {
           padding: `0 1.0875rem 1.45rem`,
         }}
       >
-        <main>{children}</main>
+        <main>
+          <MDXProvider components={components}>{children}</MDXProvider>
+        </main>
         <footer
           style={{
             marginTop: `2rem`,
           }}
         >
-          © {new Date().getFullYear()} <a href="https://roscoe.dev">Gatsby</a>
+          © {new Date().getFullYear()}{" "}
+          <a href="https://roscoe.dev">roscoe.dev</a>
         </footer>
       </div>
     </>
