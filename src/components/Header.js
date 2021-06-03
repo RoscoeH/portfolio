@@ -1,5 +1,5 @@
-/** @jsxImportSource theme-ui */
-import React from "react"
+/** @jsx jsx */
+import { jsx } from "theme-ui"
 import PropTypes from "prop-types"
 import { Themed } from "theme-ui"
 import { Link } from "gatsby"
