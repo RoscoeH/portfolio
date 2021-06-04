@@ -12,6 +12,7 @@ const Template = ({ children, ...args }) => (
 
 export const Default = Template.bind({})
 Default.args = {
+  site: { name: "Site Name", description: "Site Description" },
   children: ({ name, description }) => (
     <>
       <h1>{name}</h1>

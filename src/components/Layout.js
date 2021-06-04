@@ -2,14 +2,18 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import composeHooks from "react-hooks-compose"
 import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 import { MDXProvider } from "@mdx-js/react"
 import * as themeUiComponents from "theme-ui"
 
 import Header from "./Header"
 import SiteMetaData from "./SiteMetaData"
+import SourceList from "./SourceList"
 
 const components = {
   SiteMetaData,
+  SourceList,
+  Img,
   ...themeUiComponents,
 }
 

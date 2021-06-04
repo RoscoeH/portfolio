@@ -1,12 +1,35 @@
 ---
 ---
 
+import theme from "../gatsby-plugin-theme-ui"
+
 <SiteMetaData>
-  {({ description }) => (
-    <>
-      <Box sx={{ transform: "skewY(-1deg)", bg: "muted" }}>
-        <Box sx={{ transform: "skewY(1deg)", px: 3, py: 4 }}>{description}</Box>
-      </Box>
-    </>
-  )}
+  {({ description }) => <Box sx={{ bg: "muted", p: 3 }}>{description}</Box>}
 </SiteMetaData>
+
+<SourceList>
+  {projects =>
+    projects.map(({ node: { frontmatter } }, index) => {
+      const { title, subtitle, description, links, featuredImage } = frontmatter
+      console.log(frontmatter)
+      return (
+        <Box key={title} bg="muted" p="3">
+          <Box>
+            <Heading variant="styles.h4" sx={{ color: "text" }}>
+              {title}
+            </Heading>
+            <Text>{subtitle}</Text>
+          </Box>
+          {featuredImage && (
+            <Img
+              fixed={featuredImage.childImageSharp.fixed}
+              alt={`${title} icon`}
+              imgStyle={{ borderRadius: theme.radii[4] }}
+            />
+          )}
+          <Text>{description}</Text>
+        </Box>
+      )
+    })
+  }
+</SourceList>
