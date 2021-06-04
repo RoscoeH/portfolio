@@ -4,7 +4,9 @@
 import theme from "../gatsby-plugin-theme-ui"
 
 <SiteMetaData>
-  {({ description }) => <Box sx={{ bg: "muted", p: 3 }}>{description}</Box>}
+  {({ description }) => (
+    <Box sx={{ bg: "muted", p: 3, borderRadius: 2 }}>{description}</Box>
+  )}
 </SiteMetaData>
 
 <Divider />
@@ -41,6 +43,24 @@ import theme from "../gatsby-plugin-theme-ui"
               </Box>
             </Flex>
             <Text>{description}</Text> <Link href={slug}>read more</Link>
+            <Box
+              sx={{
+                "& > :not(:last-child)": { mr: 2 },
+              }}
+            >
+              <Link variant="button" href={links.site}>
+                Visit
+              </Link>
+              <Link variant="button" href={links.source}>
+                Source
+              </Link>
+              <Link variant="button" href={links.design}>
+                Design
+              </Link>
+              <Link variant="button" href={links.components}>
+                Components
+              </Link>
+            </Box>
           </Card>
         )
       })}

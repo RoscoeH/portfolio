@@ -100,11 +100,20 @@ const theme = {
       fontSize: 4,
       textDecoration: "none",
     },
+    button: {
+      color: "primary",
+      border: "default",
+      py: 1,
+      px: 2,
+      textDecoration: "none",
+      borderRadius: 2,
+    },
   },
   cards: {
     primary: {
       bg: "muted",
       p: "3",
+      borderRadius: 2,
     },
   },
 }
