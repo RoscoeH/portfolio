@@ -7,10 +7,10 @@ const theme = {
   radii: [0, 2, 4, 8, 16, 32, 64, 99999],
   colors: {
     text: "#caffbf",
-    background: "#080613",
+    background: "#24292E",
     primary: "#ffc6ff",
     secondary: "#9bf6ff",
-    muted: "rgba(255, 255, 255, 0.1)",
+    muted: "rgba(255, 255, 255, 0.05)",
   },
   fonts: {
     body: '"Work Sans", system-ui, -apple-system, sans-serif',
@@ -49,6 +49,7 @@ const theme = {
       lineHeight: "heading",
       fontWeight: "heading",
       fontSize: 4,
+      mb: 3,
     },
     h3: {
       color: "text",
@@ -87,20 +88,23 @@ const theme = {
     a: {
       color: "primary",
     },
+    hr: {
+      border: "none",
+      py: 2,
+    },
   },
   links: {
     heading: {
-      color: "primary",
+      color: "secondary",
       fontFamily: "heading",
       fontSize: 4,
+      textDecoration: "none",
     },
   },
   cards: {
     primary: {
       bg: "muted",
       p: "3",
-      mb: "3",
-      borderRadius: "5",
     },
   },
 }

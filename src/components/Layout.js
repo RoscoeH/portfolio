@@ -1,11 +1,12 @@
-import * as React from "react"
+/** @jsx jsx */
+import { jsx, Link } from "theme-ui"
+import React from "react"
 import PropTypes from "prop-types"
 import composeHooks from "react-hooks-compose"
 import { useStaticQuery, graphql, Link as GatsbyLink } from "gatsby"
 import Img from "gatsby-image"
 import { MDXProvider } from "@mdx-js/react"
 import * as themeUiComponents from "theme-ui"
-import { Link } from "theme-ui"
 
 import Header from "./Header"
 import SiteMetaData from "./SiteMetaData"
@@ -45,7 +46,7 @@ export const Layout = ({ children, data }) => {
           maxWidth: 960,
         }}
       >
-        <main>
+        <main sx={{ px: [3, null, null, 0] }}>
           <MDXProvider components={components}>{children}</MDXProvider>
         </main>
         <footer
