@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import composeHooks from "react-hooks-compose"
+import composeHooks from "compose-hooks-react"
 import { graphql, useStaticQuery } from "gatsby"
 
 function useSiteMetaData() {
@@ -32,4 +32,4 @@ SiteMetaData.propTypes = {
   children: PropTypes.func,
 }
 
-export default composeHooks({ useSiteMetaData })(SiteMetaData)
+export default composeHooks(useSiteMetaData)(SiteMetaData)

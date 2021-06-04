@@ -2,7 +2,7 @@
 import { jsx, Link } from "theme-ui"
 import React from "react"
 import PropTypes from "prop-types"
-import composeHooks from "react-hooks-compose"
+import composeHooks from "compose-hooks-react"
 import { useStaticQuery, graphql, Link as GatsbyLink } from "gatsby"
 import Img from "gatsby-image"
 import { MDXProvider } from "@mdx-js/react"
@@ -87,4 +87,4 @@ function useLayoutQuery() {
   }
 }
 
-export default composeHooks({ useLayoutQuery })(Layout)
+export default composeHooks(useLayoutQuery)(Layout)
