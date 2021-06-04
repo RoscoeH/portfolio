@@ -6,7 +6,9 @@ export const useAllMdx = filter => {
       allMdx(filter: { slug: { ne: "" } }) {
         edges {
           node {
-            slug
+            fields {
+              slug
+            }
             frontmatter {
               title
               subtitle
