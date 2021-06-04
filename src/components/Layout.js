@@ -1,10 +1,11 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import composeHooks from "react-hooks-compose"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link as GatsbyLink } from "gatsby"
 import Img from "gatsby-image"
 import { MDXProvider } from "@mdx-js/react"
 import * as themeUiComponents from "theme-ui"
+import { Link } from "theme-ui"
 
 import Header from "./Header"
 import SiteMetaData from "./SiteMetaData"
@@ -15,6 +16,23 @@ const components = {
   SourceList,
   Img,
   ...themeUiComponents,
+  Link: ({ href, children, ...props }) => {
+    // If external link, use Link from theme-ui
+    if (href && href.match(/^(http|https):/g)) {
+      return (
+        <Link href={href} target="_blank" {...props}>
+          {children}
+        </Link>
+      )
+    }
+
+    // Otherwise return GatsbyLink
+    return (
+      <Link as={GatsbyLink} to={href} {...props}>
+        {children}
+      </Link>
+    )
+  },
 }
 
 export const Layout = ({ children, data }) => {

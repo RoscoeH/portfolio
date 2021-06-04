@@ -87,32 +87,20 @@ const theme = {
     a: {
       color: "primary",
     },
-    pre: {
-      fontFamily: "monospace",
-      overflowX: "auto",
-      code: {
-        color: "inherit",
-      },
+  },
+  links: {
+    heading: {
+      color: "primary",
+      fontFamily: "heading",
+      fontSize: 4,
     },
-    code: {
-      fontFamily: "monospace",
-      fontSize: "inherit",
-    },
-    table: {
-      width: "100%",
-      borderCollapse: "separate",
-      borderSpacing: 0,
-    },
-    th: {
-      textAlign: "left",
-      borderBottomStyle: "solid",
-    },
-    td: {
-      textAlign: "left",
-      borderBottomStyle: "solid",
-    },
-    img: {
-      maxWidth: "100%",
+  },
+  cards: {
+    primary: {
+      bg: "muted",
+      p: "3",
+      mb: "3",
+      borderRadius: "5",
     },
   },
 }

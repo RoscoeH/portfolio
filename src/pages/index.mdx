@@ -7,29 +7,35 @@ import theme from "../gatsby-plugin-theme-ui"
   {({ description }) => <Box sx={{ bg: "muted", p: 3 }}>{description}</Box>}
 </SiteMetaData>
 
+<Divider />
+
 <SourceList>
   {projects =>
-    projects.map(({ node: { frontmatter } }, index) => {
-      const { title, subtitle, description, links, featuredImage } = frontmatter
+    projects.map(({ node: { slug, frontmatter } }, index) => {
       console.log(frontmatter)
+      const { title, subtitle, description, links, featuredImage } = frontmatter
       return (
-        <Box key={title} bg="muted" p="3">
-          <Box>
-            <Heading variant="styles.h4" sx={{ color: "text" }}>
-              {title}
-            </Heading>
-            <Text>{subtitle}</Text>
-          </Box>
-          {featuredImage && (
-            <Img
-              fixed={featuredImage.childImageSharp.fixed}
-              alt={`${title} icon`}
-              imgStyle={{ borderRadius: theme.radii[4] }}
-            />
-          )}
-          <Text>{description}</Text>
-        </Box>
+        <Card key={title} >
+          <Flex mb="3">
+            {featuredImage && (
+              <Img
+                fixed={featuredImage.childImageSharp.fixed}
+                alt={`${title} icon`}
+                imgStyle={{ borderRadius: theme.radii[4] }}
+              />
+            )}
+            <Box ml="3">
+              <Link href={`/${slug}`} variant="heading">
+                {title}
+              </Link><br />
+              <Text>{subtitle}</Text>
+            </Box>
+          </Flex>
+          <Text>{description}</Text>{' '}
+          <Link href={slug}>read more</Link>
+        </Card>
       )
     })
-  }
+}
+
 </SourceList>
