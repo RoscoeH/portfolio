@@ -14132,6 +14132,11 @@ rc@^1.2.7, rc@^1.2.8:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
+react-bytesize-icons@^0.12.2:
+  version "0.12.2"
+  resolved "https://registry.yarnpkg.com/react-bytesize-icons/-/react-bytesize-icons-0.12.2.tgz#ea36f3087c687e320654dae4dfb819ce3ba541b8"
+  integrity sha512-s4B0XljA4R3Fe7B9l8ZGAwH7YVIauwfx4z0z2uLe1HcX+e3Nb6P1qT0gPf9e92U39K0+gtEZO+bsT3jABwKJJQ==
+
 react-colorful@^5.0.1:
   version "5.2.2"
   resolved "https://registry.yarnpkg.com/react-colorful/-/react-colorful-5.2.2.tgz#0a69d0648db47e51359d343854d83d250a742243"

@@ -11,11 +11,13 @@ import * as themeUiComponents from "theme-ui"
 import Header from "./Header"
 import SiteMetaData from "./SiteMetaData"
 import SourceList from "./SourceList"
+import Icon from "./Icon"
 
 const components = {
   SiteMetaData,
   SourceList,
   Img,
+  Icon,
   ...themeUiComponents,
   Link: ({ href, children, ...props }) => {
     // If external link, use Link from theme-ui

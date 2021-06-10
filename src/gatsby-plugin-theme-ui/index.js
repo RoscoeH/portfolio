@@ -6,6 +6,8 @@ const theme = {
   sizes: [0, 4, 8, 16, 32, 64, 128, 256, 512, 640, 720, 960],
   radii: [0, 2, 4, 8, 16, 32, 64, 99999],
   colors: {
+    light: "#ffffff",
+    dark: "#000000",
     text: "#caffbf",
     background: "#24292E",
     primary: "#ffc6ff",
@@ -101,12 +103,26 @@ const theme = {
       textDecoration: "none",
     },
     button: {
+      display: "inline-flex",
+      alignItems: "center",
       color: "primary",
       border: "default",
       py: 1,
       px: 2,
       textDecoration: "none",
       borderRadius: 3,
+
+      "& > *": {
+        mr: 2,
+      },
+
+      "&:hover": {
+        color: "secondary",
+      },
+
+      "&:active": {
+        color: "light",
+      },
     },
   },
   cards: {
