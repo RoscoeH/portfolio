@@ -11,7 +11,7 @@ const Header = ({ siteTitle }) => (
         m: `0 auto`,
         maxWidth: 11,
         px: 3,
-        py: 4,
+        py: 6,
         textAlign: "center",
       }}
     >
