@@ -5,7 +5,7 @@ import theme from "../gatsby-plugin-theme-ui"
 
 <SiteMetaData>
   {({ description }) => (
-    <Box sx={{ bg: "muted", p: 3, borderRadius: 2 }}>{description}</Box>
+    <Box sx={{ bg: "muted", p: 3, borderRadius: 4 }}>{description}</Box>
   )}
 </SiteMetaData>
 
@@ -26,41 +26,45 @@ import theme from "../gatsby-plugin-theme-ui"
         const { slug } = fields
         return (
           <Card key={title}>
-            <Flex mb="3">
-              {featuredImage && (
-                <Img
-                  fixed={featuredImage.childImageSharp.fixed}
-                  alt={`${title} icon`}
-                  imgStyle={{ borderRadius: theme.radii[4] }}
-                />
-              )}
-              <Box ml="3">
-                <Link href={slug} variant="heading">
-                  {title}
+            <Flex sx={{ flexDirection: "column", height: "100%" }}>
+              <Flex mb="3">
+                {featuredImage && (
+                  <Img
+                    fixed={featuredImage.childImageSharp.fixed}
+                    alt={`${title} icon`}
+                    imgStyle={{ borderRadius: theme.radii[3] }}
+                  />
+                )}
+                <Box ml="3">
+                  <Link href={slug} variant="heading">
+                    {title}
+                  </Link>
+                  <br />
+                  <Text>{subtitle}</Text>
+                </Box>
+              </Flex>
+              <Text sx={{ flex: "1 1 auto" }}>{description}</Text>
+              <Box
+                sx={{
+                  mt: 3,
+                  textAlign: "right",
+                  "& > :not(:last-child)": { mr: 2 },
+                }}
+              >
+                <Link variant="button" href={links.site}>
+                  Visit Site
                 </Link>
-                <br />
-                <Text>{subtitle}</Text>
-              </Box>
-            </Flex>
-            <Text>{description}</Text> <Link href={slug}>read more</Link>
-            <Box
-              sx={{
-                "& > :not(:last-child)": { mr: 2 },
-              }}
-            >
-              <Link variant="button" href={links.site}>
-                Visit
-              </Link>
-              <Link variant="button" href={links.source}>
-                Source
-              </Link>
-              <Link variant="button" href={links.design}>
+                <Link variant="button" href={links.source}>
+                  View Project
+                </Link>
+                {/* <Link variant="button" href={links.design}>
                 Design
               </Link>
               <Link variant="button" href={links.components}>
                 Components
-              </Link>
-            </Box>
+              </Link> */}
+              </Box>
+            </Flex>
           </Card>
         )
       })}

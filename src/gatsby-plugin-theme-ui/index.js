@@ -106,14 +106,14 @@ const theme = {
       py: 1,
       px: 2,
       textDecoration: "none",
-      borderRadius: 2,
+      borderRadius: 3,
     },
   },
   cards: {
     primary: {
       bg: "muted",
       p: "3",
-      borderRadius: 2,
+      borderRadius: 4,
     },
   },
 }
