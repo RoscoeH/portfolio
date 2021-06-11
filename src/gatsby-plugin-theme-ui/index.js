@@ -13,6 +13,16 @@ const theme = {
     primary: "#ffc6ff",
     secondary: "#9bf6ff",
     muted: "rgba(255, 255, 255, 0.05)",
+    spectrum: {
+      red: "#ffadad",
+      orange: "#ffd6a5",
+      yellow: "#fdffb6",
+      green: "#caffbf",
+      blue: "#9bf6ff",
+      darkBlue: "#a0c4ff",
+      purple: "#bdb2ff",
+      pink: "#ffc6ff",
+    },
   },
   fonts: {
     body: '"Work Sans", system-ui, -apple-system, sans-serif',
@@ -97,10 +107,19 @@ const theme = {
   },
   links: {
     heading: {
-      color: "secondary",
+      color: "primary",
       fontFamily: "heading",
       fontSize: 4,
       textDecoration: "none",
+
+      "&:hover": {
+        textDecoration: "underline",
+        color: "secondary",
+      },
+
+      "&:active": {
+        color: "light",
+      },
     },
     button: {
       display: "inline-flex",
