@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx, Link } from "theme-ui"
+import { Fragment } from "react"
 import PropTypes from "prop-types"
 import composeHooks from "compose-hooks-react"
 import { useStaticQuery, graphql, Link as GatsbyLink } from "gatsby"
@@ -39,7 +40,7 @@ const components = {
 
 export const Layout = ({ children, data }) => {
   return (
-    <>
+    <Fragment>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div
         style={{
@@ -59,7 +60,7 @@ export const Layout = ({ children, data }) => {
           <a href="https://roscoe.dev">roscoe.dev</a>
         </footer>
       </div>
-    </>
+    </Fragment>
   )
 }
 

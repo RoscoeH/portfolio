@@ -3,7 +3,10 @@ import { useStaticQuery, graphql } from "gatsby"
 export const useAllMdx = filter => {
   const query = useStaticQuery(graphql`
     query allMdx {
-      allMdx(filter: { slug: { ne: "" } }) {
+      allMdx(
+        filter: { slug: { ne: "" } }
+        sort: { fields: frontmatter___date, order: DESC }
+      ) {
         edges {
           node {
             fields {

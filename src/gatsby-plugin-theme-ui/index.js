@@ -123,6 +123,7 @@ const theme = {
     },
     button: {
       display: "inline-flex",
+      justifyContent: "center",
       alignItems: "center",
       color: "primary",
       border: "default",
