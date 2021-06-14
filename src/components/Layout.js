@@ -51,7 +51,7 @@ export const Layout = ({ children, data }) => {
         <main sx={{ px: [3, null, null, 0] }}>
           <MDXProvider components={components}>{children}</MDXProvider>
         </main>
-        <footer sx={{ py: 4, textAlign: "center" }}>
+        <footer sx={{ fontSize: 0, pt: 3, textAlign: "center" }}>
           <Themed.p>
             Want to hire me? <Link href="#contact">Let's get in touch</Link>
           </Themed.p>
@@ -61,11 +61,7 @@ export const Layout = ({ children, data }) => {
               Buy me a coffee ☕
             </Link>
           </Themed.p>
-          <Themed.p>
-            {" "}
-            © {new Date().getFullYear()}{" "}
-            <Link href="https://roscoe.dev">roscoe.dev</Link>
-          </Themed.p>
+          <Themed.p>© {new Date().getFullYear()} roscoe.dev</Themed.p>
         </footer>
       </div>
     </Fragment>

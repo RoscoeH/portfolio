@@ -107,6 +107,11 @@ const theme = {
       py: 2,
     },
   },
+  text: {
+    small: {
+      fontSize: 1,
+    },
+  },
   links: {
     heading: {
       color: "primary",
