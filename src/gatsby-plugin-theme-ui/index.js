@@ -110,14 +110,17 @@ const theme = {
       color: "primary",
       fontFamily: "heading",
       fontSize: 4,
+      textDecoration: "none",
+      boxShadow: t => `inset 0 -2px 0 ${t.colors.primary}`,
 
       "&:hover": {
-        textDecoration: "underline",
         color: "secondary",
+        boxShadow: t => `inset 0 -2px 0 ${t.colors.secondary}`,
       },
 
       "&:active": {
         color: "light",
+        boxShadow: t => `inset 0 -2px 0 ${t.colors.light}`,
       },
     },
     button: {
