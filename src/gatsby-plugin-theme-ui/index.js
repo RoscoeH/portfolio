@@ -99,6 +99,8 @@ const theme = {
     },
     a: {
       color: "primary",
+      textDecoration: "none",
+      boxShadow: t => `inset 0 -1px 0 ${t.colors.primary}`,
     },
     hr: {
       border: "none",

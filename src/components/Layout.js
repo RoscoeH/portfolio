@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Link } from "theme-ui"
+import { jsx, Link, Themed } from "theme-ui"
 import { Fragment } from "react"
 import PropTypes from "prop-types"
 import composeHooks from "compose-hooks-react"
@@ -51,13 +51,21 @@ export const Layout = ({ children, data }) => {
         <main sx={{ px: [3, null, null, 0] }}>
           <MDXProvider components={components}>{children}</MDXProvider>
         </main>
-        <footer
-          style={{
-            marginTop: `2rem`,
-          }}
-        >
-          © {new Date().getFullYear()}{" "}
-          <a href="https://roscoe.dev">roscoe.dev</a>
+        <footer sx={{ py: 4, textAlign: "center" }}>
+          <Themed.p>
+            Want to hire me? <Link href="#contact">Let's get in touch</Link>
+          </Themed.p>
+          <Themed.p>
+            Want to support me?{" "}
+            <Link href="https://www.buymeacoffee.com/roscoe.dev">
+              Buy me a coffee ☕
+            </Link>
+          </Themed.p>
+          <Themed.p>
+            {" "}
+            © {new Date().getFullYear()}{" "}
+            <Link href="https://roscoe.dev">roscoe.dev</Link>
+          </Themed.p>
         </footer>
       </div>
     </Fragment>
