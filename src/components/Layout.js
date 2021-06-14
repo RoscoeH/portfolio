@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx, Link } from "theme-ui"
-import React from "react"
 import PropTypes from "prop-types"
 import composeHooks from "compose-hooks-react"
 import { useStaticQuery, graphql, Link as GatsbyLink } from "gatsby"
