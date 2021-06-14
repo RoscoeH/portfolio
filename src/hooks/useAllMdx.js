@@ -4,7 +4,7 @@ export const useAllMdx = filter => {
   const query = useStaticQuery(graphql`
     query allMdx {
       allMdx(
-        filter: { slug: { ne: "" } }
+        filter: { frontmatter: { title: { ne: "" } } }
         sort: { fields: frontmatter___date, order: DESC }
       ) {
         edges {
@@ -35,5 +35,7 @@ export const useAllMdx = filter => {
     }
   `)
 
-  return query.allMdx.edges
+  return query.allMdx.edges.filter(edge =>
+    edge.node.fields.slug.includes(filter)
+  )
 }

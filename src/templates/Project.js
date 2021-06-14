@@ -11,7 +11,6 @@ const ProjectTemplate = ({
     mdx: { body },
   },
 }) => {
-  console.log("body", body)
   return (
     <Layout>
       <MDXProvider>

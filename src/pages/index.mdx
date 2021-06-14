@@ -16,11 +16,11 @@ const NUM_PROJECTS = 4
   <Heading variant="styles.h2" mb="0">
     Latest Projects
   </Heading>
-  <Link variant="heading" href="/projects">
+  <Link variant="heading" href="/projects/">
     View All
   </Link>
 </Flex>
-<SourceList>
+<SourceList filter="projects">
   {projects => (
     <Grid columns={[1, 2, 2, 3]}>
       {projects
@@ -33,7 +33,9 @@ const NUM_PROJECTS = 4
             links,
             featuredImage,
           } = frontmatter
+          console.log(projects)
           const { slug } = fields
+          console.log(frontmatter)
           return (
             <Card key={title}>
               <Flex sx={{ flexDirection: "column", height: "100%" }}>
