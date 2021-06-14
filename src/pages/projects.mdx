@@ -3,22 +3,8 @@
 
 import theme from "../gatsby-plugin-theme-ui"
 
-<SiteMetaData>
-  {({ description }) => (
-    <Box sx={{ bg: "muted", p: 3, borderRadius: 4 }}>{description}</Box>
-  )}
-</SiteMetaData>
+<Heading variant="styles.h2">Projects</Heading>
 
-<Divider />
-
-<Flex sx={{ justifyContent: "space-between", alignItems: "center", mb: 3 }}>
-  <Heading variant="styles.h2" mb="0">
-    Latest Projects
-  </Heading>
-  <Link variant="heading" href="/projects/">
-    View All
-  </Link>
-</Flex>
 <SourceList>
   {projects => (
     <Grid columns={[1, 2, 2, 3]}>

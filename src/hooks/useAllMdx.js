@@ -1,6 +1,6 @@
 import { useStaticQuery, graphql } from "gatsby"
 
-export const useAllMdx = filter => {
+export const useAllMdx = (filter = "") => {
   const query = useStaticQuery(graphql`
     query allMdx {
       allMdx(
