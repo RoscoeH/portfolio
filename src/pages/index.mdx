@@ -14,7 +14,7 @@ export const NUM_PROJECTS = 6
 
 <Flex sx={{ justifyContent: "space-between", alignItems: "center", mb: 3 }}>
   <Heading variant="styles.h2" mb="0">
-    Latest Projects
+    Projects
   </Heading>
   <Link variant="heading" href="/projects/">
     View All
@@ -33,9 +33,7 @@ export const NUM_PROJECTS = 6
             links,
             featuredImage,
           } = frontmatter
-          console.log(projects)
           const { slug } = fields
-          console.log(frontmatter)
           return (
             <Card key={title}>
               <Flex sx={{ flexDirection: "column", height: "100%" }}>
@@ -48,7 +46,7 @@ export const NUM_PROJECTS = 6
                     />
                   )}
                   <Box ml="3">
-                    <Link href={slug} variant="heading">
+                    <Link href={slug} variant="title">
                       {title}
                     </Link>
                     <br />

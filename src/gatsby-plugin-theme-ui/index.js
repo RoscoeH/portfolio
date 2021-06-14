@@ -123,6 +123,20 @@ const theme = {
         boxShadow: t => `inset 0 -2px 0 ${t.colors.light}`,
       },
     },
+    title: {
+      color: "primary",
+      fontFamily: "heading",
+      fontSize: 3,
+      textDecoration: "none",
+
+      "&:hover": {
+        color: "secondary",
+      },
+
+      "&:active": {
+        color: "light",
+      },
+    },
     button: {
       display: "inline-flex",
       justifyContent: "center",
@@ -135,7 +149,7 @@ const theme = {
       borderRadius: 3,
 
       "& > *": {
-        mr: 2,
+        mr: 1,
       },
 
       "&:hover": {
