@@ -12,7 +12,14 @@ const NUM_PROJECTS = 4
 
 <Divider />
 
-<Heading variant="styles.h2">Latest Projects</Heading>
+<Flex sx={{ justifyContent: "space-between", alignItems: "center", mb: 3 }}>
+  <Heading variant="styles.h2" mb="0">
+    Latest Projects
+  </Heading>
+  <Link variant="heading" href="/projects">
+    View All
+  </Link>
+</Flex>
 <SourceList>
   {projects => (
     <Grid columns={[1, 2, 2, 3]}>
