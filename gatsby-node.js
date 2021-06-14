@@ -24,7 +24,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const result = await graphql(`
     query {
-      allMdx(filter: { slug: { ne: "" } }) {
+      allMdx(filter: { slug: { ne: "" }, frontmatter: { title: { ne: "" } } }) {
         edges {
           node {
             id
@@ -37,16 +37,14 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  result.data.allMdx.edges
-    .filter(({ node }) => node.frontmatter && node.frontmatter.title)
-    .forEach(({ node }) => {
-      createPage({
-        path: node.fields.slug,
-        component: path.resolve(`./src/templates/Project.js`),
-        context: {
-          id: node.id,
-          slug: node.fields.slug,
-        },
-      })
+  result.data.allMdx.edges.forEach(({ node }) => {
+    createPage({
+      path: node.fields.slug,
+      component: path.resolve(`./src/templates/Project.js`),
+      context: {
+        id: node.id,
+        slug: node.fields.slug,
+      },
     })
+  })
 }
