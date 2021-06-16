@@ -15,7 +15,7 @@ const Gallery = ({ images }) => {
   const { theme } = useThemeUI()
   const { radii, space } = theme
   return (
-    <div>
+    <div sx={{ borderRadius: 3, overflow: "hidden" }}>
       <Swiper slidesPerView="auto" spaceBetween={space[3]}>
         {images.map((image, index) => (
           <SwiperSlide
@@ -24,7 +24,7 @@ const Gallery = ({ images }) => {
           >
             <Img
               fixed={image.childImageSharp.fixed}
-              style={{ borderRadius: radii[4] }}
+              style={{ borderRadius: radii[3], display: "block" }}
             />
           </SwiperSlide>
         ))}
