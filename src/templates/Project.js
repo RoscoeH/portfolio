@@ -1,21 +1,22 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
+import { jsx, Themed } from "theme-ui"
 import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import { MDXProvider } from "@mdx-js/react"
 
 import Layout from "../components/Layout"
+import Gallery from "../components/Gallery"
 
 const ProjectTemplate = ({
   data: {
-    mdx: { body },
+    mdx: { body, frontmatter },
   },
 }) => {
+  const { title, images } = frontmatter
   return (
     <Layout>
-      <MDXProvider>
-        <MDXRenderer>{body}</MDXRenderer>
-      </MDXProvider>
+      <Themed.h2>{title}</Themed.h2>
+      <Gallery images={images} />
+      <MDXRenderer>{body}</MDXRenderer>
     </Layout>
   )
 }
@@ -33,6 +34,14 @@ export const pageQuery = graphql`
       slug
       frontmatter {
         title
+        images {
+          childImageSharp {
+            fixed(height: 192, quality: 90) {
+              ...GatsbyImageSharpFixed
+              width
+            }
+          }
+        }
       }
       fields {
         slug
