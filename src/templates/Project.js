@@ -1,21 +1,55 @@
 /** @jsx jsx */
-import { jsx, Themed } from "theme-ui"
+import { jsx, Themed, useThemeUI, Text, Box, Grid, Flex, Link } from "theme-ui"
 import { graphql } from "gatsby"
+import Img from "gatsby-image"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
 import Layout from "../components/Layout"
 import Gallery from "../components/Gallery"
+import Icon from "../components/Icon"
 
 const ProjectTemplate = ({
   data: {
     mdx: { body, frontmatter },
   },
 }) => {
-  const { title, images } = frontmatter
+  const { theme, breakpoints } = useThemeUI()
+  const { radii } = theme
+  console.log(breakpoints)
+  const { title, links, featuredImage, images } = frontmatter
   return (
     <Layout>
-      <Themed.h2>{title}</Themed.h2>
-      <Gallery images={images} />
+      <Flex sx={{ flexDirection: "column", alignItems: "center" }}>
+        {featuredImage && (
+          <Img
+            fixed={featuredImage.childImageSharp.fixed}
+            alt={`${title} icon`}
+            imgStyle={{ borderRadius: radii[4] }}
+          />
+        )}
+        <Themed.h1 sx={{ variant: "styles.h2" }}>{title}</Themed.h1>
+      </Flex>
+      {images && <Gallery images={images} />}
+      {links && (
+        <Grid columns={[1, 1, 2, 2, 4]} gap={2}>
+          <Link variant="button" href={links.site}>
+            <Icon icon="external" />
+            Visit Site
+          </Link>
+          <Link variant="button" href={links.source}>
+            <Icon icon="github" />
+            Source
+          </Link>
+          <Link variant="button" href={links.source}>
+            <Icon icon="figma" />
+            Design
+          </Link>
+          <Link variant="button" href={links.source}>
+            <Icon icon="storybook" />
+            Components
+          </Link>
+        </Grid>
+      )}
       <MDXRenderer>{body}</MDXRenderer>
     </Layout>
   )
@@ -34,9 +68,23 @@ export const pageQuery = graphql`
       slug
       frontmatter {
         title
+        subtitle
+        links {
+          site
+          source
+          design
+          components
+        }
+        featuredImage {
+          childImageSharp {
+            fixed(quality: 90, width: 128) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
         images {
           childImageSharp {
-            fixed(height: 192, quality: 90) {
+            fixed(height: 192) {
               ...GatsbyImageSharpFixed
               width
             }

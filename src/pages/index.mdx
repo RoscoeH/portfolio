@@ -22,7 +22,7 @@ export const NUM_PROJECTS = 6
 </Flex>
 <SourceList filter="projects">
   {projects => (
-    <Grid columns={[1, 2, 2, 3]}>
+    <Grid columns={[1, null, null, null, 2, null, 3]}>
       {projects
         .slice(0, NUM_PROJECTS)
         .map(({ node: { frontmatter, fields } }, index) => {
@@ -53,7 +53,7 @@ export const NUM_PROJECTS = 6
                     <Text>{subtitle}</Text>
                   </Box>
                 </Flex>
-                <Text>{description}</Text>
+                <Text sx={{ flex: "1 1 auto" }}>{description}</Text>
                 <Box
                   sx={{
                     mt: 3,

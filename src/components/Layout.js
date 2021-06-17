@@ -16,7 +16,7 @@ export const Layout = ({ children, data }) => {
       }}
     >
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <main sx={{ px: [3, null, null, 0] }}>
+      <main sx={{ px: [3, 3, 3, null, null, null, 0] }}>
         <LayoutProvider>{children}</LayoutProvider>
       </main>
       <footer sx={{ fontSize: 0, pt: 3, textAlign: "center" }}>
