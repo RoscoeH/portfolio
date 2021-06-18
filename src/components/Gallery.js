@@ -15,7 +15,12 @@ const Gallery = ({ images }) => {
   const { theme } = useThemeUI()
   const { radii, space } = theme
   return (
-    <div sx={{ my: 4, borderRadius: 3, overflow: "hidden" }}>
+    <div sx={{
+      my: 4,
+      borderRadius: 3,
+      overflow: "hidden",
+    transform: 'translateZ(0)' // Fixes borderRadius for iOS Safari
+    }}>
       <Swiper slidesPerView="auto" spaceBetween={space[3]}>
         {images.map((image, index) => (
           <SwiperSlide
