@@ -27,11 +27,13 @@ const ProjectTemplate = ({
             imgStyle={{ borderRadius: radii[4] }}
           />
         )}
-        <Themed.h1 sx={{ variant: "styles.h2" }}>{title}</Themed.h1>
+        <Themed.h1 sx={{ variant: "styles.h2", mt: 2, mb: 0 }}>
+          {title}
+        </Themed.h1>
       </Flex>
       {images && <Gallery images={images} />}
       {links && (
-        <Grid columns={[1, 1, 2, 2, 4]} gap={2}>
+        <Grid columns={[1, 1, 2, 2, 4]} gap={2} mb={4}>
           <Link variant="button" href={links.site}>
             <Icon icon="external" />
             Visit Site

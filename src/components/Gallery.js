@@ -15,7 +15,7 @@ const Gallery = ({ images }) => {
   const { theme } = useThemeUI()
   const { radii, space } = theme
   return (
-    <div sx={{ my: 3, borderRadius: 3, overflow: "hidden" }}>
+    <div sx={{ my: 4, borderRadius: 3, overflow: "hidden" }}>
       <Swiper slidesPerView="auto" spaceBetween={space[3]}>
         {images.map((image, index) => (
           <SwiperSlide
