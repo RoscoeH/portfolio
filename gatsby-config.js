@@ -40,13 +40,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `roscoe.dev`,
+        short_name: `roscoe.dev`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#24292e`,
+        theme_color: `#ffc6ff`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `../images/icon.png`,
       },
     },
     `gatsby-plugin-gatsby-cloud`,

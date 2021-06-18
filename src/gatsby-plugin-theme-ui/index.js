@@ -10,7 +10,7 @@ const theme = {
     light: "#ffffff",
     dark: "#000000",
     text: "#caffbf",
-    background: "#24292E",
+    background: "#24292e",
     primary: "#ffc6ff",
     secondary: "#9bf6ff",
     muted: "rgba(255, 255, 255, 0.05)",
