@@ -84,12 +84,30 @@ export const NUM_PROJECTS = 6
 <Heading variant="styles.h2">Links</Heading>
 
 <SiteMetaData>
-  {({ links }) =>
-    links.map(({ name, url, icon }) => (
-      <Link variant="button">
-        <Icon icon={icon} />
-        {name}
-      </Link>
-    ))
-  }
+  {({ links }) => (
+    <Grid columns={2} gap={2}>
+      {links.map(({ name, url, icon }) => (
+        <Link variant="button">
+          <Icon icon={icon} />
+          {name}
+        </Link>
+      ))}
+    </Grid>
+  )}
 </SiteMetaData>
+
+<Divider />
+
+<Heading variant="styles.h2">Contact</Heading>
+<Box as="form" sx={{ textAlign: "right" }} onSubmit={e => e.preventDefault()}>
+  <Label htmlFor="name">Name</Label>
+  <Input id="name" name="name" />
+  <Label htmlFor="email">Email</Label>
+  <Input id="email" name="email" />
+  <Label htmlFor="message">Message</Label>
+  <Textarea id="message" name="message" rows={6} />
+  <Button sx={{ width: "100%" }}>
+    <Icon icon="email" />
+    Send
+  </Button>
+</Box>
