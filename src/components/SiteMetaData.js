@@ -10,6 +10,11 @@ function useSiteMetaData() {
         siteMetadata {
           title
           description
+          links {
+            name
+            url
+            icon
+          }
         }
       }
     }

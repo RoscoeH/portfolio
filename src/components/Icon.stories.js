@@ -22,3 +22,9 @@ Storybook.args = { icon: "storybook" }
 
 export const Figma = Template.bind({})
 Figma.args = { icon: "figma" }
+
+export const LinkedIn = Template.bind({})
+LinkedIn.args = { icon: "linkedin" }
+
+export const Email = Template.bind({})
+Email.args = { icon: "email" }

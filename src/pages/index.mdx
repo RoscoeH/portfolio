@@ -82,3 +82,14 @@ export const NUM_PROJECTS = 6
 <Divider />
 
 <Heading variant="styles.h2">Links</Heading>
+
+<SiteMetaData>
+  {({ links }) =>
+    links.map(({ name, url, icon }) => (
+      <Link variant="button">
+        <Icon icon={icon} />
+        {name}
+      </Link>
+    ))
+  }
+</SiteMetaData>

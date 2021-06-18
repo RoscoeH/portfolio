@@ -6,6 +6,8 @@ import Eye from "@iconify/icons-octicon/eye"
 import Github from "@iconify/icons-simple-icons/github"
 import Storybook from "@iconify/icons-simple-icons/storybook"
 import Figma from "@iconify/icons-simple-icons/figma"
+import LinkedIn from "@iconify/icons-simple-icons/linkedin"
+import Email from "@iconify/icons-octicon/mail"
 
 const ICONS = {
   external: External,
@@ -13,6 +15,8 @@ const ICONS = {
   github: Github,
   storybook: Storybook,
   figma: Figma,
+  linkedin: LinkedIn,
+  email: Email,
 }
 
 const Icon = ({ icon = "eye", size = 16 }) => {
