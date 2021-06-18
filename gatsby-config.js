@@ -1,9 +1,7 @@
+const siteMetadata = require("./src/core/config.json")
+
 module.exports = {
-  siteMetadata: {
-    title: `roscoe`,
-    description: `Hi, I’m a web developer from Australia. I like using the latest web tech to make websites, webapps and gizmos.`,
-    author: `@roscoeh`,
-  },
+  siteMetadata,
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,

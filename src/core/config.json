@@ -1,0 +1,18 @@
+{
+  "title": "roscoe",
+  "author": "@roscoeh",
+  "description": "Hi, I’m a web developer from Australia. I like using the latest web tech to make websites, webapps and gizmos.",
+  "links": [
+    {
+      "name": "Github",
+      "url": "https://github.com/roscoeh",
+      "icon": "github"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://linkedin.com/roscoeh",
+      "icon": "linkedin"
+    },
+    { "name": "Email", "url": "mailto://hey@roscoe.dev", "icon": "email" }
+  ]
+}
