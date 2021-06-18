@@ -1,6 +1,7 @@
 /** @jsx jsx */
-import { jsx, Link, Themed } from "theme-ui"
+import { jsx, Link, Themed, useThemeUI } from "theme-ui"
 import PropTypes from "prop-types"
+import { Global } from "@emotion/react"
 import composeHooks from "compose-hooks-react"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -8,6 +9,8 @@ import LayoutProvider from "./LayoutProvider"
 import Header from "./Header"
 
 export const Layout = ({ children, data }) => {
+  const { theme } = useThemeUI()
+  const { colors } = theme
   return (
     <div
       sx={{
@@ -15,6 +18,14 @@ export const Layout = ({ children, data }) => {
         maxWidth: 11,
       }}
     >
+      <Global
+        styles={{
+          "::selection": {
+            color: colors.background,
+            background: colors.spectrum.purple,
+          },
+        }}
+      />
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <main sx={{ px: [3, 3, 3, null, null, null, 0] }}>
         <LayoutProvider>{children}</LayoutProvider>

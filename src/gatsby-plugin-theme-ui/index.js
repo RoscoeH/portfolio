@@ -113,6 +113,32 @@ const theme = {
       fontSize: 1,
     },
   },
+  buttons: {
+    primary: {
+      display: "inline-flex",
+      justifyContent: "center",
+      alignItems: "center",
+      bg: "transparent",
+      color: "primary",
+      border: "default",
+      py: 1,
+      px: 2,
+      textDecoration: "none",
+      borderRadius: 3,
+
+      "& > *": {
+        mr: 1,
+      },
+
+      "&:hover": {
+        color: "secondary",
+      },
+
+      "&:active": {
+        color: "light",
+      },
+    },
+  },
   links: {
     heading: {
       color: "primary",
@@ -174,6 +200,34 @@ const theme = {
       bg: "muted",
       p: "3",
       borderRadius: 4,
+    },
+  },
+  forms: {
+    input: {
+      outline: "none",
+      bg: "muted",
+      border: "none",
+      borderRadius: 3,
+      mb: 2,
+      "&:hover": {
+        boxShadow: t => `inset 0 0 0 1px ${t.colors.secondary}`,
+      },
+      "&:focus": {
+        boxShadow: t => `inset 0 0 0 1px ${t.colors.light}`,
+      },
+    },
+    textarea: {
+      outline: "none",
+      bg: "muted",
+      border: "none",
+      borderRadius: 3,
+      mb: 2,
+      "&:hover": {
+        boxShadow: t => `inset 0 0 0 1px ${t.colors.secondary}`,
+      },
+      "&:focus": {
+        boxShadow: t => `inset 0 0 0 1px ${t.colors.light}`,
+      },
     },
   },
 }
