@@ -81,11 +81,19 @@ export const NUM_PROJECTS = 6
 
 <Divider />
 
-<Heading variant="styles.h2">Links</Heading>
-
+<Heading
+  variant="styles.h2"
+  sx={{ textAlign: ["left", null, null, null, "center"] }}
+>
+  Links
+</Heading>
 <SiteMetaData>
   {({ links }) => (
-    <Grid columns={2} gap={2}>
+    <Grid
+      columns={[1, 2, null, 4]}
+      gap={2}
+      sx={{ maxWidth: 10, mx: "auto", mb: 3 }}
+    >
       {links.map(({ name, url, icon }) => (
         <Link variant="button">
           <Icon icon={icon} />
@@ -98,16 +106,33 @@ export const NUM_PROJECTS = 6
 
 <Divider />
 
-<Heading variant="styles.h2">Contact</Heading>
-<Box as="form" sx={{ textAlign: "right" }} onSubmit={e => e.preventDefault()}>
-  <Label htmlFor="name">Name</Label>
-  <Input id="name" name="name" />
-  <Label htmlFor="email">Email</Label>
-  <Input id="email" name="email" />
+<Heading
+  variant="styles.h2"
+  sx={{ textAlign: ["left", null, null, null, "center"] }}
+>
+  Contact
+</Heading>
+<Box
+  as="form"
+  sx={{ maxWidth: 10, m: "0 auto" }}
+  onSubmit={e => e.preventDefault()}
+>
+  <Grid columns={[1, null, null, 2]} gap={[2, null, null, 3]}>
+    <Box>
+      <Label htmlFor="name">Name</Label>
+      <Input id="name" name="name" mb="0" />
+    </Box>
+    <Box>
+      <Label htmlFor="email">Email</Label>
+      <Input id="email" name="email" />
+    </Box>
+  </Grid>
   <Label htmlFor="message">Message</Label>
-  <Textarea id="message" name="message" rows={6} />
-  <Button sx={{ width: "100%" }}>
-    <Icon icon="email" />
-    Send
-  </Button>
+  <Textarea id="message" name="message" rows={6} mb={3} />
+  <Box sx={{ textAlign: "right" }}>
+    <Button sx={{ width: ["100%", null, "50%", "25%"] }}>
+      <Icon icon="email" />
+      Send
+    </Button>
+  </Box>
 </Box>

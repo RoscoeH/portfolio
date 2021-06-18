@@ -105,7 +105,7 @@ const theme = {
     },
     hr: {
       border: "none",
-      py: 2,
+      py: 3,
     },
   },
   text: {
