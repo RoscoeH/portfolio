@@ -1,4 +1,42 @@
 ---
 label: Config
 hide_body: true
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+- name: description
+  type: text
+  config:
+    required: false
+  label: Description
+- name: author
+  type: text
+  config:
+    required: false
+  label: author
+- name: links
+  type: field_group_list
+  fields:
+  - name: name
+    type: text
+    config:
+      required: false
+    label: Name
+  - name: url
+    type: text
+    config:
+      required: false
+    label: Url
+  - name: icon
+    type: text
+    config:
+      required: false
+    label: Icon
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Links
