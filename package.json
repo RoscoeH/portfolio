@@ -6,6 +6,7 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@babel/plugin-proposal-decorators": "^7.14.2",
+    "@formspree/react": "^2.2.3",
     "@iconify/icons-octicon": "^1.1.8",
     "@iconify/icons-simple-icons": "^1.1.29",
     "@iconify/react": "^1.1.4",

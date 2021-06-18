@@ -8,6 +8,7 @@ import * as themeUiComponents from "theme-ui"
 
 import SiteMetaData from "./SiteMetaData"
 import SourceList from "./SourceList"
+import ContactForm from "./ContactForm"
 import Icon from "./Icon"
 
 const components = {
@@ -15,6 +16,7 @@ const components = {
   SourceList,
   Img,
   Icon,
+  ContactForm,
   ...themeUiComponents,
   Link: ({ href, children, ...props }) => {
     // If external link, use Link from theme-ui

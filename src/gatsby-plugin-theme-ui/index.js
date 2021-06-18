@@ -125,17 +125,17 @@ const theme = {
       px: 2,
       textDecoration: "none",
       borderRadius: 3,
-
-      "& > *": {
-        mr: 1,
-      },
-
       "&:hover": {
         color: "secondary",
       },
-
       "&:active": {
         color: "light",
+      },
+      "&:disabled": {
+        color: "spectrum.orange",
+      },
+      "& > *": {
+        mr: 1,
       },
     },
   },
@@ -146,12 +146,10 @@ const theme = {
       fontSize: 4,
       textDecoration: "none",
       boxShadow: t => `inset 0 -2px 0 ${t.colors.primary}`,
-
       "&:hover": {
         color: "secondary",
         boxShadow: t => `inset 0 -2px 0 ${t.colors.secondary}`,
       },
-
       "&:active": {
         color: "light",
         boxShadow: t => `inset 0 -2px 0 ${t.colors.light}`,
@@ -162,11 +160,9 @@ const theme = {
       fontFamily: "heading",
       fontSize: 3,
       textDecoration: "none",
-
       "&:hover": {
         color: "secondary",
       },
-
       "&:active": {
         color: "light",
       },
@@ -181,17 +177,14 @@ const theme = {
       px: 2,
       textDecoration: "none",
       borderRadius: 3,
-
-      "& > *": {
-        mr: 1,
-      },
-
       "&:hover": {
         color: "secondary",
       },
-
       "&:active": {
         color: "light",
+      },
+      "& > *": {
+        mr: 1,
       },
     },
   },
@@ -217,6 +210,7 @@ const theme = {
       },
     },
     textarea: {
+      fontFamily: "body",
       outline: "none",
       bg: "muted",
       border: "none",
