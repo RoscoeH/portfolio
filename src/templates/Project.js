@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Themed, useThemeUI, Text, Box, Grid, Flex, Link } from "theme-ui"
+import { jsx, Themed, useThemeUI, Grid, Flex, Link } from "theme-ui"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import { MDXRenderer } from "gatsby-plugin-mdx"

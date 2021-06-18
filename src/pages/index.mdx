@@ -6,7 +6,9 @@ export const NUM_PROJECTS = 6
 
 <SiteMetaData>
   {({ description }) => (
-    <Box sx={{ bg: "muted", p: 3, borderRadius: 4 }}>{description}</Box>
+    <Box as="p" sx={{ bg: "muted", p: 3, borderRadius: 4 }}>
+      {description}
+    </Box>
   )}
 </SiteMetaData>
 
@@ -95,7 +97,7 @@ export const NUM_PROJECTS = 6
       sx={{ maxWidth: 10, mx: "auto", mb: 3 }}
     >
       {links.map(({ name, url, icon }) => (
-        <Link variant="button">
+        <Link key={name} variant="button" href={url}>
           <Icon icon={icon} />
           {name}
         </Link>

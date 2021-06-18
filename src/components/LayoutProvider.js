@@ -20,7 +20,7 @@ const components = {
   ...themeUiComponents,
   Link: ({ href, children, ...props }) => {
     // If external link, use Link from theme-ui
-    if (href && href.match(/^(http|https):/g)) {
+    if (href && href.match(/^(http|https|mailto):/g)) {
       return (
         <Link href={href} target="_blank" {...props}>
           {children}

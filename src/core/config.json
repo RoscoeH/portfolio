@@ -20,7 +20,7 @@
     },
     {
       "name": "Email",
-      "url": "mailto://hey@roscoe.dev",
+      "url": "mailto:hey@roscoe.dev",
       "icon": "email"
     }
   ]

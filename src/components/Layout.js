@@ -37,7 +37,10 @@ export const Layout = ({ children, data }) => {
         <Themed.p>
           Want to support me?{" "}
           <Link href="https://www.buymeacoffee.com/roscoe.dev">
-            Buy me a coffee ☕
+            Buy me a coffee{" "}
+            <span role="img" aria-label="coffee">
+              ☕
+            </span>
           </Link>
         </Themed.p>
         <Themed.p>© {new Date().getFullYear()} roscoe.dev</Themed.p>
