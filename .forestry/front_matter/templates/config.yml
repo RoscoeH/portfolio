@@ -40,3 +40,5 @@ fields:
     max: 
     labelField: 
   label: Links
+pages:
+- src/core/config.json

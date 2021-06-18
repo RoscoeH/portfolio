@@ -13,6 +13,10 @@
       "url": "https://linkedin.com/roscoeh",
       "icon": "linkedin"
     },
-    { "name": "Email", "url": "mailto://hey@roscoe.dev", "icon": "email" }
+    {
+      "name": "Email",
+      "url": "mailto://hey@roscoe.dev",
+      "icon": "email"
+    }
   ]
 }
