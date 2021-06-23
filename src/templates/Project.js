@@ -17,6 +17,7 @@ const ProjectTemplate = ({
   const { radii } = theme
   console.log(breakpoints)
   const { title, links, featuredImage, images } = frontmatter
+  console.log(images)
   return (
     <Layout>
       <Flex sx={{ flexDirection: "column", alignItems: "center" }}>
@@ -91,6 +92,7 @@ export const pageQuery = graphql`
               width
             }
           }
+          publicURL
         }
       }
       fields {

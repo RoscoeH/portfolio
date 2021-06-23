@@ -14,23 +14,33 @@ SwiperCore.use([Pagination])
 const Gallery = ({ images }) => {
   const { theme } = useThemeUI()
   const { radii, space } = theme
+  const imageWidth = images.find(image => image.childImageSharp !== null)
+    .childImageSharp.fixed.width
+
+  console.log(imageWidth)
   return (
-    <div sx={{
-      my: 4,
-      borderRadius: 3,
-      overflow: "hidden",
-    transform: 'translateZ(0)' // Fixes borderRadius for iOS Safari
-    }}>
+    <div
+      sx={{
+        my: 4,
+        borderRadius: 3,
+        overflow: "hidden",
+        transform: "translateZ(0)", // Fixes borderRadius for iOS Safari
+      }}
+    >
       <Swiper slidesPerView="auto" spaceBetween={space[3]}>
         {images.map((image, index) => (
-          <SwiperSlide
-            key={index}
-            style={{ width: image.childImageSharp.fixed.width }}
-          >
-            <Img
-              fixed={image.childImageSharp.fixed}
-              style={{ borderRadius: radii[3], display: "block" }}
-            />
+          <SwiperSlide key={index} style={{ width: imageWidth }}>
+            {image.childImageSharp ? (
+              <Img
+                fixed={image.childImageSharp.fixed}
+                style={{ borderRadius: radii[3], display: "block" }}
+              />
+            ) : (
+              <img
+                src={image.publicURL}
+                sx={{ display: "block", width: imageWidth, borderRadius: 3 }}
+              />
+            )}
           </SwiperSlide>
         ))}
       </Swiper>
