@@ -16,6 +16,25 @@ const ProjectTemplate = ({
   const { theme } = useThemeUI()
   const { radii } = theme
   const { title, links, featuredImage, images } = frontmatter
+  const linkCount = Object.values(links).reduce(
+    (count, value) => (value ? count + 1 : count),
+    0
+  )
+  const isLinkCountEven = linkCount % 2 === 0
+  const linkColumns = [
+    1,
+    1,
+    isLinkCountEven ? 2 : 1,
+    isLinkCountEven ? 2 : linkCount,
+    isLinkCountEven ? 4 : linkCount,
+  ]
+  const linkGridColumnStart = [
+    1,
+    1,
+    1,
+    1,
+    isLinkCountEven && linkCount < 4 ? 2 : 1,
+  ]
   return (
     <Layout>
       <Flex sx={{ flexDirection: "column", alignItems: "center" }}>
@@ -29,23 +48,35 @@ const ProjectTemplate = ({
         <Themed.h1 sx={{ variant: "styles.h2", mt: 2 }}>{title}</Themed.h1>
       </Flex>
       {links && (
-        <Grid columns={[1, 1, 2, 2, 4]} gap={2}>
-          <Link variant="button" href={links.site}>
-            <Icon icon="external" />
-            Visit Site
-          </Link>
-          <Link variant="button" href={links.source}>
-            <Icon icon="github" />
-            Source
-          </Link>
-          <Link variant="button" href={links.source}>
-            <Icon icon="figma" />
-            Design
-          </Link>
-          <Link variant="button" href={links.source}>
-            <Icon icon="storybook" />
-            Components
-          </Link>
+        <Grid
+          columns={linkColumns}
+          gap={2}
+          sx={{ "& > *:first-child": { gridColumnStart: linkGridColumnStart } }}
+        >
+          {links.site && (
+            <Link variant="button" href={links.site}>
+              <Icon icon="external" />
+              Visit Site
+            </Link>
+          )}
+          {links.source && (
+            <Link variant="button" href={links.source}>
+              <Icon icon="github" />
+              Source
+            </Link>
+          )}
+          {links.design && (
+            <Link variant="button" href={links.design}>
+              <Icon icon="figma" />
+              Design
+            </Link>
+          )}
+          {links.components && (
+            <Link variant="button" href={links.components}>
+              <Icon icon="storybook" />
+              Components
+            </Link>
+          )}
         </Grid>
       )}
       {images && images.length > 0 && <Gallery images={images} />}
