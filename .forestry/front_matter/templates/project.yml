@@ -4,35 +4,35 @@ hide_body: false
 fields:
 - type: text
   name: title
-  label: title
+  label: Title
 - type: text
   name: subtitle
-  label: subtitle
+  label: Subtitle
 - type: datetime
   name: date
-  label: date
+  label: Date
 - type: text
   name: description
-  label: description
+  label: Description
 - type: file
   name: featuredImage
-  label: featuredImage
+  label: Icon
 - type: image_gallery
   name: images
-  label: images
+  label: Images
 - type: field_group
   name: links
-  label: links
+  label: Links
   fields:
   - type: text
     name: site
-    label: site
+    label: Site
   - type: text
     name: source
-    label: source
+    label: Source
   - type: text
     name: design
-    label: design
+    label: Design
   - type: text
     name: components
-    label: components
+    label: Components
