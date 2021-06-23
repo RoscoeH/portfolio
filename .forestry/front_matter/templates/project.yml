@@ -39,5 +39,3 @@ fields:
   - type: text
     name: components
     label: Components
-pages:
-- src/projects/geotiles.md
