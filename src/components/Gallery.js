@@ -29,7 +29,14 @@ const Gallery = ({ images }) => {
     >
       <Swiper slidesPerView="auto" spaceBetween={space[3]}>
         {images.map((image, index) => (
-          <SwiperSlide key={index} style={{ width: imageWidth }}>
+          <SwiperSlide
+            key={index}
+            style={{
+              width:
+                (image.childImageSharp && image.childImageSharp.fixed.width) ||
+                imageWidth,
+            }}
+          >
             {image.childImageSharp ? (
               <Img
                 fixed={image.childImageSharp.fixed}
