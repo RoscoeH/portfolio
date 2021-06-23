@@ -12,11 +12,6 @@ fields:
   config:
     required: false
   label: Description
-- name: author
-  type: text
-  config:
-    required: false
-  label: author
 - name: links
   type: field_group_list
   fields:

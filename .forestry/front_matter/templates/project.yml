@@ -1,0 +1,43 @@
+---
+label: Project
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: Title
+- type: text
+  name: subtitle
+  label: Subtitle
+- type: datetime
+  name: date
+  label: Date
+  config:
+    date_format: ''
+    export_format: YYYY-MM-DD
+- type: text
+  name: description
+  label: Description
+- type: file
+  name: featuredImage
+  label: Icon
+- type: image_gallery
+  name: images
+  label: Images
+- type: field_group
+  name: links
+  label: Links
+  fields:
+  - type: text
+    name: site
+    label: Site
+  - type: text
+    name: source
+    label: Source
+  - type: text
+    name: design
+    label: Design
+  - type: text
+    name: components
+    label: Components
+pages:
+- src/projects/geotiles.md
