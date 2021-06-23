@@ -42,3 +42,4 @@ fields:
   label: Links
 pages:
 - src/core/config.json
+- src/projects/geotiles.md
