@@ -1,0 +1,38 @@
+---
+label: Project
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: text
+  name: subtitle
+  label: subtitle
+- type: datetime
+  name: date
+  label: date
+- type: text
+  name: description
+  label: description
+- type: file
+  name: featuredImage
+  label: featuredImage
+- type: image_gallery
+  name: images
+  label: images
+- type: field_group
+  name: links
+  label: links
+  fields:
+  - type: text
+    name: site
+    label: site
+  - type: text
+    name: source
+    label: source
+  - type: text
+    name: design
+    label: design
+  - type: text
+    name: components
+    label: components
