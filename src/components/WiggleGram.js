@@ -107,8 +107,6 @@ const WiggleGram = ({
 
   shapes.sort(sortShapes)
 
-  console.log(shapes)
-
   return (
     <svg width="100%" viewBox={`0 0 ${width} ${height}`}>
       {shapes.map(({ Shape, x, y, size, color, displacement, children }, i) => (
