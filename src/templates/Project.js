@@ -32,7 +32,7 @@ const ProjectTemplate = ({
           {title}
         </Themed.h1>
       </Flex>
-      {images && <Gallery images={images} />}
+      {images && images.length > 0 && <Gallery images={images} />}
       {links && (
         <Grid columns={[1, 1, 2, 2, 4]} gap={2} mb={4}>
           <Link variant="button" href={links.site}>

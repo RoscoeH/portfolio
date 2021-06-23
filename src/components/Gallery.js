@@ -38,6 +38,7 @@ const Gallery = ({ images }) => {
             ) : (
               <img
                 src={image.publicURL}
+                alt=""
                 sx={{ display: "block", width: imageWidth, borderRadius: 3 }}
               />
             )}
