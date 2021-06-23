@@ -16,8 +16,6 @@ const Gallery = ({ images }) => {
   const { radii, space } = theme
   const imageWidth = images.find(image => image.childImageSharp !== null)
     .childImageSharp.fixed.width
-
-  console.log(imageWidth)
   return (
     <div
       sx={{

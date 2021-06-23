@@ -13,11 +13,9 @@ const ProjectTemplate = ({
     mdx: { body, frontmatter },
   },
 }) => {
-  const { theme, breakpoints } = useThemeUI()
+  const { theme } = useThemeUI()
   const { radii } = theme
-  console.log(breakpoints)
   const { title, links, featuredImage, images } = frontmatter
-  console.log(images)
   return (
     <Layout>
       <Flex sx={{ flexDirection: "column", alignItems: "center" }}>
