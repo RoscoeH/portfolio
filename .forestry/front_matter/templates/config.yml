@@ -7,16 +7,16 @@ fields:
   config:
     required: false
   label: Title
+- name: subtitle
+  type: text
+  config:
+    required: false
+  label: Subtitle
 - name: description
   type: text
   config:
     required: false
   label: Description
-- name: author
-  type: text
-  config:
-    required: false
-  label: author
 - name: links
   type: field_group_list
   fields:
