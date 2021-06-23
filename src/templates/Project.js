@@ -28,13 +28,10 @@ const ProjectTemplate = ({
             imgStyle={{ borderRadius: radii[4] }}
           />
         )}
-        <Themed.h1 sx={{ variant: "styles.h2", mt: 2, mb: 0 }}>
-          {title}
-        </Themed.h1>
+        <Themed.h1 sx={{ variant: "styles.h2", mt: 2 }}>{title}</Themed.h1>
       </Flex>
-      {images && images.length > 0 && <Gallery images={images} />}
       {links && (
-        <Grid columns={[1, 1, 2, 2, 4]} gap={2} mb={4}>
+        <Grid columns={[1, 1, 2, 2, 4]} gap={2}>
           <Link variant="button" href={links.site}>
             <Icon icon="external" />
             Visit Site
@@ -53,6 +50,7 @@ const ProjectTemplate = ({
           </Link>
         </Grid>
       )}
+      {images && images.length > 0 && <Gallery images={images} />}
       <MDXRenderer>{body}</MDXRenderer>
     </Layout>
   )
