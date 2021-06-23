@@ -51,19 +51,6 @@ const Header = ({ siteTitle }) => (
             position: "relative",
             color: "text",
             textDecoration: `none`,
-
-            "&:after": {
-              content: `"${siteTitle}"`,
-              position: "absolute",
-              left: "2px",
-              textShadow: ({ colors }) => `-1px 0 magenta`,
-              color: "text",
-              bg: "background",
-              overflow: "hidden",
-              clipPath: "inset(0 0 0 0)",
-              animation: `${noise1} 2s infinite linear alternate-reverse`,
-            },
-
             "&:before": {
               content: `"${siteTitle}"`,
               position: "absolute",
@@ -75,6 +62,19 @@ const Header = ({ siteTitle }) => (
               clipPath: "inset(0 0 0 0)",
               animation: `${noise2} 2s infinite linear alternate-reverse`,
             },
+            "&:after": {
+              content: `"${siteTitle}"`,
+              position: "absolute",
+              left: "2px",
+              textShadow: ({ colors }) => `-1px 0 magenta`,
+              color: "text",
+              bg: "background",
+              overflow: "hidden",
+              clipPath: "inset(0 0 0 0)",
+              animation: `${noise1} 2s infinite linear alternate-reverse`,
+            },
+            "&:hover:before": { display: "none" },
+            "&:hover:after": { display: "none" },
           }}
         >
           {siteTitle}
