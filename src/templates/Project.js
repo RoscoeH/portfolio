@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Themed, useThemeUI, Grid, Flex, Link } from "theme-ui"
+import { jsx, Themed, useThemeUI, Box, Grid, Flex, Link } from "theme-ui"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import { MDXRenderer } from "gatsby-plugin-mdx"
@@ -37,52 +37,54 @@ const ProjectTemplate = ({
   ]
   return (
     <Layout>
-      <Flex sx={{ flexDirection: "column", alignItems: "center" }}>
-        {featuredImage && (
-          <Img
-            fixed={featuredImage.childImageSharp.fixed}
-            alt={`${title} icon`}
-            imgStyle={{ borderRadius: radii[4] }}
-          />
+      <Box sx={{ maxWidth: 9, mx: "auto" }}>
+        <Flex sx={{ flexDirection: "column", alignItems: "center" }}>
+          {featuredImage && (
+            <Img
+              fixed={featuredImage.childImageSharp.fixed}
+              alt={`${title} icon`}
+              imgStyle={{ borderRadius: radii[4] }}
+            />
+          )}
+          <Themed.h1 sx={{ variant: "styles.h2", mt: 2 }}>{title}</Themed.h1>
+        </Flex>
+        {links && (
+          <Grid
+            columns={linkColumns}
+            gap={2}
+            sx={{
+              "& > *:first-of-type": { gridColumnStart: linkGridColumnStart },
+            }}
+          >
+            {links.site && (
+              <Link variant="button" href={links.site}>
+                <Icon icon="external" />
+                Visit Site
+              </Link>
+            )}
+            {links.source && (
+              <Link variant="button" href={links.source}>
+                <Icon icon="github" />
+                Source
+              </Link>
+            )}
+            {links.design && (
+              <Link variant="button" href={links.design}>
+                <Icon icon="figma" />
+                Design
+              </Link>
+            )}
+            {links.components && (
+              <Link variant="button" href={links.components}>
+                <Icon icon="storybook" />
+                Components
+              </Link>
+            )}
+          </Grid>
         )}
-        <Themed.h1 sx={{ variant: "styles.h2", mt: 2 }}>{title}</Themed.h1>
-      </Flex>
-      {links && (
-        <Grid
-          columns={linkColumns}
-          gap={2}
-          sx={{
-            "& > *:first-of-type": { gridColumnStart: linkGridColumnStart },
-          }}
-        >
-          {links.site && (
-            <Link variant="button" href={links.site}>
-              <Icon icon="external" />
-              Visit Site
-            </Link>
-          )}
-          {links.source && (
-            <Link variant="button" href={links.source}>
-              <Icon icon="github" />
-              Source
-            </Link>
-          )}
-          {links.design && (
-            <Link variant="button" href={links.design}>
-              <Icon icon="figma" />
-              Design
-            </Link>
-          )}
-          {links.components && (
-            <Link variant="button" href={links.components}>
-              <Icon icon="storybook" />
-              Components
-            </Link>
-          )}
-        </Grid>
-      )}
-      {images && images.length > 0 && <Gallery images={images} />}
-      <MDXRenderer>{body}</MDXRenderer>
+        {images && images.length > 0 && <Gallery images={images} />}
+        <MDXRenderer>{body}</MDXRenderer>
+      </Box>
     </Layout>
   )
 }
