@@ -51,7 +51,9 @@ const ProjectTemplate = ({
         <Grid
           columns={linkColumns}
           gap={2}
-          sx={{ "& > *:first-child": { gridColumnStart: linkGridColumnStart } }}
+          sx={{
+            "& > *:first-of-type": { gridColumnStart: linkGridColumnStart },
+          }}
         >
           {links.site && (
             <Link variant="button" href={links.site}>
