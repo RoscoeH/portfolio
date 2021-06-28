@@ -17,6 +17,32 @@ links:
   components: "https://github.com/roscoeh/cats-in-cups"
 ---
 
-## Snakepit
+While rained-in during my stay in India, I turned to [The Coding Train](https://thecodingtrain.com/) for some educational entertainment.
+I was watching his coding challenge on [Evolutionary Steering Behaviours](https://www.youtube.com/watch?v=flxOkx0yLrY&list=PLRqwX-V7Uu6bw4n02JP28QDuUdNi3EXxJ&index=12)
+and it make me wonder what it would be like to apply to principles of [genetic algorithms](https://en.wikipedia.org/wiki/Genetic_algorithm)
+to the mechanics of the class game [Snake](<https://en.wikipedia.org/wiki/Snake_(video_game_genre)>).
 
-Long descrption goes here
+The result is **Snakepit**.
+Snakes traverse a 2D grid in search for food and sometimes lay eggs.
+Each time a snake moves, it consumes energy.
+If energy reaches zero, the snake will die and leave behind some food.
+Snakes can consume the following types of food:
+
+- Green - Replenishes large amount of energy AND increases length of snake.
+- Blue - Replenishes small amount of energy AND decreases length of snake.
+- Red - Drains a small amount of energy.
+
+Each of the snakes have genes which control the following attributes:
+
+- Attraction to GREEN, BLUE and RED food
+- Attraction to other snakes
+- Egg laying rate
+
+When a snake lays an egg, its DNA is passed down to the child with a small chance of mutation.
+Snakes with good genes are more likely to survive longer and therefore lay more eggs.
+
+Running the simulation is the fun part. You can see all kinds of scenarios play out that loosely resemble nature.
+Often the population will quickly fizzle out, either by a bad selection of genes or sometimes by expanding too quickly, leading to a food shortage.
+Occasionally, the population will develop a 'strategy' that allows them to survive almost indefinitely.
+Sometimes the snakes will have a low egg laying rate, but are so finely tuned for finding food that they can survive with just a few snakes at a time.
+On the other extreme, I've seen populations evolve an egg laying rate that is so high, it fills the board with tiny snakes creating a plentiful food supply.
