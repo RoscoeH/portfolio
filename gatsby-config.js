@@ -17,14 +17,6 @@ module.exports = {
         path: `${__dirname}/src/projects/`,
       },
     },
-    {
-      resolve: `gatsby-plugin-mdx`,
-      options: {
-        defaultLayouts: {
-          default: require.resolve("./src/components/Layout.js"),
-        },
-      },
-    },
     `gatsby-plugin-theme-ui`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
@@ -37,6 +29,18 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-remark-images`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        defaultLayouts: {
+          default: require.resolve("./src/components/Layout.js"),
+        },
+        gatsbyRemarkPlugins: [
+          { resolve: `gatsby-remark-images`, options: { maxWidth: 1200 } },
+        ],
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
