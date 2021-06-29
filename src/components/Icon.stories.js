@@ -28,3 +28,6 @@ LinkedIn.args = { icon: "linkedin" }
 
 export const Email = Template.bind({})
 Email.args = { icon: "email" }
+
+export const Heart = Template.bind({})
+Heart.args = { icon: "heart" }

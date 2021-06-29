@@ -8,6 +8,7 @@ import Storybook from "@iconify/icons-simple-icons/storybook"
 import Figma from "@iconify/icons-simple-icons/figma"
 import LinkedIn from "@iconify/icons-simple-icons/linkedin"
 import Email from "@iconify/icons-octicon/mail"
+import Heart from "@iconify/icons-octicon/heart"
 
 const ICONS = {
   external: External,
@@ -17,6 +18,7 @@ const ICONS = {
   figma: Figma,
   linkedin: LinkedIn,
   email: Email,
+  heart: Heart,
 }
 
 const Icon = ({ icon = "eye", size = 16 }) => {
