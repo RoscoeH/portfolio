@@ -3,28 +3,28 @@ import { jsx } from "theme-ui"
 
 const PRESETS = {
   art: {
-    bg: "spectrum.green",
-    color: "dark",
+    color: "spectrum.green",
+    bg: "dark",
   },
   game: {
-    bg: "spectrum.red",
-    color: "dark",
+    color: "spectrum.red",
+    bg: "dark",
   },
   blog: {
-    bg: "spectrum.blue",
-    color: "dark",
+    color: "spectrum.blue",
+    bg: "dark",
   },
   portfolio: {
-    bg: "spectrum.purple",
-    color: "dark",
+    color: "spectrum.purple",
+    bg: "dark",
   },
   simulation: {
-    bg: "spectrum.yellow",
-    color: "dark",
+    color: "spectrum.yellow",
+    bg: "dark",
   },
   utility: {
-    bg: "spectrum.orange",
-    color: "dark",
+    color: "spectrum.orange",
+    bg: "dark",
   },
 }
 
