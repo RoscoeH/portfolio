@@ -9,13 +9,7 @@ import theme from "../gatsby-plugin-theme-ui"
   {projects => (
     <Grid columns={[1, null, null, null, 2, null, 3]}>
       {projects.map(({ node: { frontmatter, fields } }, index) => {
-        const {
-          title,
-          subtitle,
-          description,
-          links,
-          featuredImage,
-        } = frontmatter
+        const { title, description, tags, links, featuredImage } = frontmatter
         const { slug } = fields
         return (
           <Card key={title}>
@@ -33,7 +27,13 @@ import theme from "../gatsby-plugin-theme-ui"
                     {title}
                   </Link>
                   <br />
-                  <Text>{subtitle}</Text>
+                  <Text>
+                    {tags.map(tag => (
+                      <span>
+                        <Tag label={tag} />{" "}
+                      </span>
+                    ))}
+                  </Text>
                 </Box>
               </Flex>
               <Text sx={{ flex: "1 1 auto" }}>{description}</Text>

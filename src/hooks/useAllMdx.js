@@ -16,6 +16,7 @@ export const useAllMdx = (filter = "") => {
               title
               subtitle
               description
+              tags
               links {
                 components
                 design

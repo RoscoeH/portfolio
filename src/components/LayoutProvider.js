@@ -10,11 +10,13 @@ import SiteMetaData from "./SiteMetaData"
 import SourceList from "./SourceList"
 import ContactForm from "./ContactForm"
 import Icon from "./Icon"
+import Tag from "./Tag"
 
 const components = {
   SiteMetaData,
   SourceList,
   Img,
+  Tag,
   Icon,
   ContactForm,
   ...themeUiComponents,

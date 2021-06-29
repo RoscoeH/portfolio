@@ -29,13 +29,7 @@ export const NUM_PROJECTS = 6
       {projects
         .slice(0, NUM_PROJECTS)
         .map(({ node: { frontmatter, fields } }, index) => {
-          const {
-            title,
-            subtitle,
-            description,
-            links,
-            featuredImage,
-          } = frontmatter
+          const { title, description, tags, links, featuredImage } = frontmatter
           const { slug } = fields
           return (
             <Card key={title}>
@@ -53,7 +47,13 @@ export const NUM_PROJECTS = 6
                       {title}
                     </Link>
                     <br />
-                    <Text>{subtitle}</Text>
+                    <Text>
+                      {tags.map(tag => (
+                        <span>
+                          <Tag label={tag} />{" "}
+                        </span>
+                      ))}
+                    </Text>
                   </Box>
                 </Flex>
                 <Text sx={{ flex: "1 1 auto" }}>{description}</Text>

@@ -31,7 +31,16 @@ const PRESETS = {
 const Tag = ({ label = "tag", bg = "light", color = "dark" }) => {
   const colors = PRESETS[label] || { bg, color }
   return (
-    <span sx={{ ...colors, borderRadius: 7, px: 3, py: 1, fontSize: 1 }}>
+    <span
+      sx={{
+        ...colors,
+        borderRadius: 7,
+        px: 2,
+        py: "2px",
+        fontSize: 1,
+        // opacity: 0.8,
+      }}
+    >
       {label}
     </span>
   )
