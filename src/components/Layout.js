@@ -7,8 +7,9 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import LayoutProvider from "./LayoutProvider"
 import Header from "./Header"
+import Seo from "./Seo"
 
-export const Layout = ({ children, data }) => {
+export const Layout = ({ children, data, path }) => {
   const { theme } = useThemeUI()
   const { colors } = theme
   return (
@@ -26,6 +27,7 @@ export const Layout = ({ children, data }) => {
           },
         }}
       />
+      <Seo title={/projects/.test(path) ? "Projects" : null} />
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <main sx={{ px: [3, 3, 3, null, null, null, 0] }}>
         <LayoutProvider>{children}</LayoutProvider>
