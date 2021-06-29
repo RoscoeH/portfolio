@@ -34,7 +34,7 @@ export const Layout = ({ children, data, path }) => {
       </main>
       <footer sx={{ fontSize: 0, pt: 3, textAlign: "center" }}>
         <Themed.p>
-          Want to hire me? <Link href="#contact">Let's get in touch</Link>
+          Want to hire me? <Link href="/#contact">Let's get in touch</Link>
         </Themed.p>
         <Themed.p>
           Want to support me?{" "}
