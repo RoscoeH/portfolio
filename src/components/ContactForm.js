@@ -29,7 +29,7 @@ const ContactForm = () => {
       sx={{ maxWidth: 10, m: "0 auto" }}
       onSubmit={handleSubmit}
     >
-      {true ? (
+      {state.succeeded ? (
         <Flex
           as="p"
           sx={{
